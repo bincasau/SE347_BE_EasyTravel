@@ -18,9 +18,7 @@ public class Itinerary {
     @Column(name = "activities", columnDefinition = "TEXT")
     private String activities;
 
-    @OneToOne
-    @JoinColumn(name = "tour_id", referencedColumnName = "tour_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "tour_id", nullable = false)
     private Tour tour;
-
-
 }
