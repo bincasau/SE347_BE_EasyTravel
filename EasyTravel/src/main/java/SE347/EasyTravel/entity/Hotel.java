@@ -46,11 +46,6 @@ public class Hotel {
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Image> images;
 
-    @OneToMany(mappedBy = "hotel",
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH},
-            orphanRemoval = false,
-            fetch = FetchType.LAZY)
-    private List<Itinerary> itineraries;
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Review> reviews;

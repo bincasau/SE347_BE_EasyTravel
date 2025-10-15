@@ -22,7 +22,5 @@ public class Itinerary {
     @JoinColumn(name = "tour_id", referencedColumnName = "tour_id")
     private Tour tour;
 
-    @ManyToOne
-    @JoinColumn(name = "hotel_id")
-    private Hotel hotel;
+
 }
